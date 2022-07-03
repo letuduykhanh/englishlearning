@@ -1,0 +1,42 @@
+<div class="caption-container">
+  <div class="card">
+    <div class="card-header">
+      <%= icon_tag "btn-chevron-down",
+                   role: :button,
+                   data: { "data-bs-toggle": :tooltip, "data-bs-placement": :bottom, title: "Slide down" } %>
+      Subtitles
+      <%= icon_tag "btn-close caption-box",
+                   role: :button,
+                   data: { "data-bs-toggle": :tooltip, "data-bs-placement": :bottom, title: "Close" } %>
+      <span
+        class="form-switch"
+        data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        title="Auto scroll"
+      >
+        <input class="form-check-input" type="checkbox" id="auto-scroll" checked>
+        <label class="form-check-label small" for="auto-scroll"></label>
+      </span>
+    </div>
+    <div class="card-body">
+      <%= render_async caption_path(video.video_id),
+                       retry_count: 5,
+                       error_message: "Couldnot fetch it, please press F5 or reload page",
+                       content_for_name: :caption do %>
+        <ul class="caption-list">
+          <% 15.times do |time| %>
+            <li class="caption">
+              <div class="placeholder-glow btn ps-0 pe-2">
+                <%= icon_tag "fa-circle-play fa-2x placeholder rounded-circle" %>
+              </div>
+              <p class="placeholder-glow w-100">
+                <span class="placeholder col-12"></span>
+              </p>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= content_for :caption %>

@@ -1,0 +1,14 @@
+<ul class="caption-list">
+  <% caption.each do |line| %>
+    <li class="caption">
+      <%= icon_tag "toggle fa-2x fa-circle-play",
+                   role: :button,
+                   data: { "data-start": line[:start], "data-end": line[:end] } %>
+      <p>
+        <% line[:text].split do |word| %>
+          <span class="word" role="button" tabindex="0" ><%= word %></span>
+        <% end %>
+      </p>
+    </li>
+  <% end %>
+</ul>

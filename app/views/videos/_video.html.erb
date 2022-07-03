@@ -1,0 +1,64 @@
+<div class="video-container">
+  <div class="video-player">
+    <svg
+      class="place-holder"
+      width="100%"
+      height="100%"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      preserveAspectRatio="xMidYMid slice"
+      focusable="false"
+    >
+      <rect width="100%" height="100%"></rect>
+    </svg>
+    <div id="youtube" data-videoid="<%= video.video_id %>"></div>
+    <div class="more-videos d-none"></div>
+  </div>
+  <div class="video-controller">
+    <div class="card-header">
+      <p class="card-text">...</p>
+    </div>
+    <div class="card-body">
+      <div>
+        <span class="btn-repeat disabled-gray disabled">
+          <%= icon_tag "fa-repeat disabled-gray fa-inverse", role: :button %>
+          <%= icon_tag "fa-1 fa-inverse d-none", role: :button %>
+        </span>
+        <span class="btn-caption-toggle disabled">
+          <%= icon_tag "fa-closed-captioning disabled fa-inverse", role: :button %>
+          <%= icon_tag "fa-slash d-none", role: :button %>
+        </span>
+      </div>
+      <div>
+        <%= icon_tag "btn-prev disabled-gray fa-inverse", role: :button %>
+        <%= icon_tag "btn-play disabled fa-circle-play fa-inverse", role: :button %>
+        <%= icon_tag "btn-next disabled-gray fa-inverse", role: :button %>
+      </div>
+      <div>
+        <span class="btn-caption disabled">
+          <%= icon_tag "fa-rectangle-list disabled fa-inverse", role: :button %>
+          <%= icon_tag "fa-slash d-none", role: :button %>
+        </span>
+        <!-- <span class="btn-group">
+          <%= icon_tag "btn-speed disabled fa-inverse",
+                       role: :button,
+                       data: { "data-bs-toggle": :dropdown, "data-bs-display": :static } %>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">x 0.5</a></li>
+            <li><a class="dropdown-item" href="#">x 0.75</a></li>
+            <li><a class="dropdown-item active" href="#">x 1.0</a></li>
+            <li><a class="dropdown-item" href="#">x 1.5</a></li>
+          </ul>
+        </span>
+        <span class="btn-group">
+          <%= icon_tag "btn-more disabled fa-inverse",
+                       role: :button,
+                       data: { "data-bs-toggle": :dropdown, 'data-bs-display': :static } %>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Font size</a></li>
+          </ul>
+        </span> -->
+      </div>
+    </div>
+  </div>
+</div>

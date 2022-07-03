@@ -1,0 +1,78 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+  # - rubocop-rspec
+
+AllCops:
+  EnabledByDefault: true
+  RubyInterpreters:
+    - ruby
+    - rake
+  Exclude:
+    - bin/*
+    # - conf/**/*
+    - db/schema.rb
+    - log/**/*
+    - node_modules/**/*
+    # - public/**/*
+    - tmp/**/*
+
+# LAYOUT COPS
+
+Layout/LineLength:
+  Max: 120
+  AutoCorrect: true
+
+# LINTING COPS
+Lint/ConstantResolution:
+  Enabled: false
+
+# METRIC COPS
+
+Metrics/BlockLength:
+  Exclude:
+    - config/environments/development.rb
+    - Gemfile
+
+# NAMEING COPS
+
+# SECURITY COPS
+
+# STYLE COPS
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Style/MissingElse:
+  Enabled: false
+
+Style/InlineComment:
+  Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: false
+
+Style/Copyright:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  EnforcedStyle: omit_parentheses
+
+# RAILS
+Rails/SchemaComment:
+  Enabled: false
+
+# BUNDLER COPS
+
+# GEMSPECCOPS
+
+Bundler/GemComment:
+  Enabled: false
+
+Bundler/GemVersion:
+  Enabled: false

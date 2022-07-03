@@ -1,0 +1,62 @@
+<nav class="menu-bar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img
+        src="/bootstrap-logo.svg"
+        alt="avatar"
+        width="30"
+        height="24"
+        role="button"
+      >
+        <span>Bootstrap</span>
+      </a>
+      <form class="search">
+        <%= icon_tag "fa-magnifying-glass", role: :button %>
+        <div class="dropdown">
+          <input
+            class="dropdown-toggle"
+            type="search"
+            placeholder="Search"
+            autocomplete="off"
+          >
+            <ul class="dropdown-menu">
+              <li>
+                <button class="dropdown-item" type="button">Action</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">Another action</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">
+                  Something else here
+                </button>
+              </li>
+            </ul>
+          </div>
+        </form>
+        <div class="navbar-user">
+          <a class="dropdown-toggle" data-bs-toggle="dropdown" role="button">
+            <img
+          class="avatar"
+          src="/bootstrap-logo.svg"
+          alt="avatar"
+          width="30"
+          height="24"
+          role="button"
+        >
+              My name
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action dadasd</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Something else</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>

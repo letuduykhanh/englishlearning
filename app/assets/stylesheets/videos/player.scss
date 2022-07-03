@@ -1,0 +1,152 @@
+.video-container {
+  @extend .col-sm-12, .col-md-7, .pe-md-0;
+
+  .video-player {
+    @extend .position-relative;
+    padding-bottom: calc(9 / 16 * 100%);
+
+    iframe,
+    .place-holder,
+    .more-videos {
+      @extend .position-absolute;
+    }
+
+    iframe {
+      @extend .w-100, .h-100;
+      z-index: 1;
+    }
+
+    .place-holder {
+      @extend .card-img-top;
+      z-index: 0;
+    }
+
+    .more-videos {
+      @extend .text-light;
+      z-index: 2;
+    }
+  }
+
+  .video-controller {
+    @extend .card, .border-0, .rounded-0;
+
+    .card-header {
+      @extend .d-flex,
+        .justify-content-center,
+        .align-items-center,
+        .rounded-0,
+        .min-vh-8;
+
+      .card-text {
+        @extend .lead;
+      }
+    }
+
+    .card-body {
+      @extend .bg-dark,
+        .d-flex,
+        .justify-content-between,
+        .align-items-center,
+        .p-2;
+
+      div:first-child,
+      div:nth-child(2),
+      div:last-child {
+        @extend .d-flex, .align-items-center;
+      }
+
+      div:first-child,
+      div:last-child {
+        @extend .col;
+      }
+
+      div:first-child {
+        @extend .justify-content-start, .ms-1;
+      }
+
+      div:nth-child(2) {
+        @extend .justify-content-between, .col-4;
+      }
+
+      div:last-child {
+        @extend .justify-content-end, .me-1;
+      }
+
+      .btn-repeat,
+      .btn-caption-toggle,
+      .btn-caption {
+        @extend .fa-stack;
+        font-size: calc(0.3em + 1vmin);
+      }
+
+      // .btn-caption,
+      .btn-repeat,
+      .btn-speed {
+        @extend .me-3;
+      }
+
+      .btn-speed,
+      .btn-more {
+        @extend .dropdown-toggle;
+      }
+
+      .btn-speed,
+      .btn-prev,
+      .btn-next,
+      .btn-more {
+        font-size: calc(0.75em + 1vmin);
+      }
+
+      .btn-prev {
+        @extend .fa-backward-step;
+      }
+
+      .btn-play {
+        @extend .fa-2x;
+      }
+
+      .btn-next {
+        @extend .fa-forward-step;
+      }
+
+      .btn-speed {
+        @extend .fa-bolt;
+      }
+
+      .btn-more {
+        @extend .fa-ellipsis;
+      }
+
+      .fa-repeat,
+      .fa-closed-captioning,
+      .fa-rectangle-list {
+        @extend .fa-stack-2x;
+      }
+
+      .fa-1,
+      .fa-slash {
+        @extend .fa-stack-1x;
+      }
+
+      .fa-slash {
+        @extend .fa-lg;
+      }
+
+      .fa-1 {
+        @extend .fa-xs;
+      }
+
+      .btn-group {
+        @extend .dropup;
+
+        .dropdown-toggle::after {
+          content: none;
+        }
+
+        .dropdown-menu {
+          @extend .dropdown-menu-end;
+        }
+      }
+    }
+  }
+}

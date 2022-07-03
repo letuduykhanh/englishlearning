@@ -1,0 +1,24 @@
+<div class="videos-index">
+  <% @items.each do |item| %>
+    <% video_id = item["id"]["videoId"] %>
+    <% snippet = item["snippet"] %>
+    <% thumbnail = snippet["thumbnails"]["medium"] %>
+    <div class="card">
+      <a href="/videos/<%= video_id %>">
+        <%= image_tag "placeholder.jpeg",
+                      class: "card-img-top img-fluid lazy",
+                      width: "100%",
+                      height: thumbnail["height"],
+                      alt: "thumbnail",
+                      "data-src": thumbnail["url"] %>
+        <div class="card-body">
+          <h6 class="card-title placeholder-glow">
+            <span class="placeholder col-12">
+              <%= snippet["title"] %>
+            </span>
+          </h6>
+        </div>
+      </a>
+    </div>
+  <% end %>
+</div>

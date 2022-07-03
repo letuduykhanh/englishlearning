@@ -1,0 +1,12 @@
+.videos-show {
+  @extend .row, .justify-content-center;
+
+  .video-container,
+  .caption-container,
+  .vocabulary-container {
+    @extend .px-0, .px-sm-0, .px-md-df;
+  }
+
+  @import 'player';
+  @import 'caption';
+}

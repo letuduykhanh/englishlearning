@@ -1,0 +1,19 @@
+<ol class="list-group">
+  <% entries.each_with_index do |entry, index| %>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">
+          <%= entry['word'] %>
+          <a
+            href="https://en.wiktionary.org/wiki/Wiktionary:Abbreviations_in_Webster"
+            class="small text-muted"
+            target="_blank"
+          >
+            <%= entry['wordtype'] %>
+          </a>
+        </div>
+        <%= entry['definition'] %>
+      </div>
+    </li>
+  <% end %>
+</ol>

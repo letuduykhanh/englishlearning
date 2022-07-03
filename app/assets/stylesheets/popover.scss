@@ -1,0 +1,32 @@
+.popover {
+  @extend .d-flex, .flex-column, .rounded-0;
+
+  .popover-header {
+    text-transform: capitalize;
+
+    .btn-close-popover {
+      @extend .fa-solid, .fa-xmark, .float-end, .text-muted;
+
+      &:hover {
+        @extend .text-dark;
+      }
+    }
+  }
+
+  .popover-body {
+    @extend .flex-grow-1, .overflow-scroll, .p-0;
+
+    .spinner {
+      @extend .m-3;
+    }
+
+    .list-group,
+    .list-group-item {
+      @extend .border-0;
+    }
+
+    .list-group {
+      @extend .list-group-numbered;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.videos-index {
+  @extend .row, .row-cols-sm-2, .row-cols-md-3, .row-cols-lg-4;
+
+  .card {
+    @extend .border-0
+  }
+
+  a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+}

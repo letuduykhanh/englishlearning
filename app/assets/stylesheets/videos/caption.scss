@@ -1,0 +1,66 @@
+.caption-container {
+  @extend .col-sm-12, .col-md-5;
+
+  .card {
+    @extend .h-100;
+
+    .card-header {
+      .btn-chevron-down {
+        @extend .fa-chevron-down, .me-2;
+      }
+
+      .form-switch,
+      .btn-close {
+        @extend .float-end;
+      }
+
+      .form-switch {
+        .form-check-input:checked {
+          background-color: $dark;
+          border-color: $dark;
+        }
+      }
+
+      .btn-close {
+        @extend .fa-xmark, .d-none, .d-md-inline-block, .ms-1;
+        margin-right: -0.5rem;
+        background: none;
+      }
+    }
+
+    .card-body {
+      @extend .position-relative, .overflow-scroll, .p-0;
+
+      .caption-list {
+        @extend .ps-0, .mb-0, .position-absolute;
+
+        .caption {
+          @extend .d-inline-flex,
+            .align-items-center,
+            .list-group-item,
+            .list-group-item-action,
+            .border-start-0,
+            .border-end-0,
+            .min-vh-8;
+
+          i.toggle {
+            @extend .zoom, .me-2;
+          }
+
+          p {
+            @extend .mx-2, .mb-0;
+            color: #6c757d;
+
+            span.word {
+              @extend .text-zoom;
+            }
+          }
+
+          &:last-of-type {
+            margin-bottom: 20em;
+          }
+        }
+      }
+    }
+  }
+}
